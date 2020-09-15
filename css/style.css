@@ -23,15 +23,6 @@ body {
   color: #fff;
 }
 
-button {
-  cursor: pointer;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
 h1,
 h2,
 h3,
@@ -41,6 +32,15 @@ h6,
 p {
   margin: 0;
   font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 .title-h1 {
@@ -109,7 +109,6 @@ img {
 
 .nav-list__link {
   font-weight: 500;
-  font-size: 15px;
   line-height: 1.1333;
   text-transform: uppercase;
   color: #fff;
@@ -140,7 +139,6 @@ img {
 
 .header__info-btn {
   font-weight: 500;
-  font-size: 15px;
   line-height: 1.133;
   padding: 7px 28px;
 }
@@ -411,8 +409,6 @@ img {
 }
 
 .advantages__info-text {
-  font-weight: 300;
-  font-size: 15px;
   line-height: 1.357;
 }
 
@@ -507,8 +503,6 @@ img {
   visibility: hidden;
   opacity: 0;
   transition: 0.5s;
-  font-weight: 300;
-  font-size: 15px;
   line-height: 1.4666;
 }
 
@@ -1246,6 +1240,11 @@ img {
     max-height: 100%;
   }
 
+  .contact__item-title,
+  .contacts__item-title {
+    font-size: 18px;
+  }
+
   .contacts__inner {
     flex-direction: column;
   }
@@ -1278,11 +1277,30 @@ img {
   .contacts__inner-item .social__link {
     margin: 0 15px;
   }
-}
 
-@media (max-width: 680px) {
+  body,
+  .advantages__info-text {
+    font-size: 12px;
+  }
+
   .title-h1 {
-    font-size: 60px;
+    font-size: 40px;
+  }
+
+  .title-h2 {
+    font-size: 25px;
+  }
+
+  .section__text {
+    font-size: 15px;
+  }
+
+  .main__img-desc {
+    font-size: 15px;
+  }
+
+  .advantages__info-title {
+    font-size: 15px;
   }
 }
 
@@ -1312,6 +1330,10 @@ img {
     box-sizing: border-box;
     width: auto;
     background: transparent;
+  }
+
+  .accordion__item-body {
+    width: 100%;
   }
 
   .contacts-form__btn {
