@@ -133,4 +133,4 @@ for (const i of buttons) {
 	});
 }());
 
-alert('w' + window.innerWidth + 'h' + window.innerWidth)
+alert('w' + window.innerWidth + 'h' + window.innerHeight)
