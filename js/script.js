@@ -132,3 +132,5 @@ for (const i of buttons) {
 		setTimeout(function () { navLock = true }, 500);
 	});
 }());
+
+alert('w' + window.innerWidth + 'h' + window.innerWidth)
