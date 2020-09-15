@@ -1229,6 +1229,7 @@ img {
 
   .accordion__item-title {
     font-size: 18px;
+    padding-right: 15px;
   }
 
   .accordion__item._active .accordion__item-body {
@@ -1339,6 +1340,12 @@ img {
   .contacts-form__btn {
     grid-column: span 2;
     justify-self: stretch;
+  }
+}
+
+@media (max-width: 568px) {
+  .accordion__item-title {
+    font-size: 15px;
   }
 }
 
