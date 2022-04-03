@@ -47,9 +47,15 @@ M.mod_quiz.timer = {
     },
     update: function() {
         var Y = M.mod_quiz.timer.Y
-          , secondsleft = Math.floor((M.mod_quiz.timer.endtime) / 1e3);
-        
-        
+          , secondsleft = Math.floor((M.mod_quiz.timer.endtime - new Date().getTime()) / 1e3);
+        var hours = Math.floor(secondsleft / 3600);
+        secondsleft -= hours * 3600;
+        var minutes = Math.floor(secondsleft / 60);
+        secondsleft -= minutes * 60;
+        var seconds = secondsleft;
+        Y.one('#quiz-time-left').setContent(hours + ':' + M.mod_quiz.timer.two_digit(minutes) + ':' + M.mod_quiz.timer.two_digit(seconds));
+        M.mod_quiz.timer.timeoutid = setTimeout(M.mod_quiz.timer.update, 100)
+    }
 };
 M.mod_quiz.nav = M.mod_quiz.nav || {};
 M.mod_quiz.nav.update_flag_state = function(attemptid, questionid, newstate) {
